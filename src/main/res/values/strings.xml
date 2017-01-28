@@ -1,0 +1,313 @@
+<resources>
+    <string name="app_name">Asian Stronghold</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_store">StoreActivity</string>
+
+    <string name="logo_name" translatable="false" >S.K.E.L.E.T.O.N.</string>
+    <!--setting-->
+    <string name="screenshot_ok">Screenshots in file : as_screenshots</string>
+    <string name="screenshot_fail">Screenshot unsuccessful!</string>
+    <string name="in_pause">PAUSE...</string>
+
+    <string name="sys_warn">WARNING!</string>
+    <string name="sys_save_note">Progress that newer than you loaded will be REMOVED!</string>
+
+    <!--info-->
+
+    <string name="you_win">You win!</string>
+    <string name="next_stage">Next</string>
+    <string name="title_activity_play_scene">PlaySceneActivity</string>
+    <string name="title_activity_start">StartActivity</string>
+    <string name="game_title">ASIAN STRONGHOLD</string>
+    <string name="game_version" translatable="false">V 1.01 FREE</string>
+    <string name="ok"><u>Confirm</u></string>
+    <string name="cancel"><u>Cancel</u></string>
+    <string name="win">You have won the final victory !</string>
+    <string name="fail">Defeated</string>
+    <string name="not_quit">Exit is unavailable currently...</string>
+
+    <string name="message">Information</string>
+    <string name="event">Intelligence</string>
+    <string name="choose_skill">Choose or strengthen your skills !</string>
+
+    <string name="continue_val">Continue...</string>
+    <string name="newgame_val">New Tour</string>
+    <string name="challenge_val">New Challenge</string>
+
+    <string name="about">About</string>
+    <string name="quit">Quit</string>
+
+    <string name="new_game_warning">New Challenge will remove your progress of Tour and Challenge before</string>
+    <string name="u_max_tour">You have finished stage : </string>
+
+    <string name="enemy_wainf">Besiegers troops in:</string>
+    <string name="enemy_waves">!</string>
+    <string name="last_wave">General offensive!</string>
+    <string name="for_quit">QUIT NOW ?</string>
+
+    <string name="u_max_endless_nums">You have challenged </string>
+    <string name="u_max_endless_nums_end"> s </string>
+
+    <string name="u_have">You already own : </string>
+    <string name="u_upgrade">,upgrade it? </string>
+
+    <string name="u_have_n">You do not have : </string>
+    <string name="u_get_it">,get it? </string>
+
+    <string name="save_inf_stage">Chapter : </string>
+    <string name="save_info_hp">Your HP : </string>
+
+
+    <!--skill infomation-->
+    <string name="sk_01_inf">Auto Oxybeles:Large and powerful Oxybeles \r\n Arrows+1 per level</string>
+    <string name="sk_02_inf">Prosperity:Improve the ability of the city to repair \r\n Repair+1 per level</string>
+    <string name="sk_03_inf">Dragon Rocket:Launch high-explosive rockets\r\n Rocket+1 per level</string>
+    <string name="sk_04_inf">Catapult:Catapult upon the gates\r\n Attack power up per level</string>
+    <string name="sk_05_inf">Loyalty:Increase City HP\r\n + 50 HP per level,repair+1 every 2 level</string>
+    <string name="sk_06_inf">Bamboo Musket:Cheap and personal handy firearm \r\n City auto defense,salvo+1 per level</string>
+    <string name="sk_07_inf">Rocket Crow:The kite mounted the little rockets \r\n mother crow+1 every 4 level</string>
+    <string name="sk_08_inf">Loud Bomb:Bomb compensates dead angle \r\n Can not control,Bomb+2 per level</string>
+
+
+    <!--
+    -->
+    <!--scene information-->
+        <string name="sc01_title_01">Chapter 1:The emperor arrived:</string>
+        <string name="sc01_msg_01">On the way of Emperor ZhaoYuan\'s northern tour,The city is the temporary palace.\r\n
+           The sentry found many suspicious in the distance.
+        </string>
+        <string name="sc01_msg_02">Adjust Green bar that bottom left of the screen changes Shooting angle.\r\n
+            click Flak Bottom right corner to launch.</string>
+        <string name="sc01_msg_03">
+            You can click boots on the upper left corner to PAUSE or SCREENSHOT,\r\n
+            When you have right Shooting angle,\r\n
+            Auto Oxybeles will be good at dealing with a small group of enemies.\r\n
+            They are coming ! launch!
+        </string>
+    <!--==============2===============-->
+        <string name="sc02_title_01">Chapter 2:Reinforce defense:\r\n
+        The mechanic accompanying emperor erected Catapult.\r\n
+            Green bar to adjust,and click on the screen to launch !
+        </string>
+        <string name="sc02_msg_01">Enemy spies got the emperor\'s whereabouts,\r\n
+            before sending troops surround this border town.\r\n
+        </string>
+    <!--==============3===============-->
+        <string name="sc03_title_01">Chapter 3:Enemy emerged:\r\n
+        <font color="#ff0000">The enemy\'s messenger come to your town....</font>\r\n
+        The generals commanding the siege ,called \'wise master\' AnLu,\r\n
+        Said the messenger,His master\'s army is numerous, well equipped.\r\n
+        And ordered us to open the gate,kneel down on both sides of the street.\r\n
+        The emperor become angry from embarrassment\r\n
+        Hope you can command a good fight.
+        </string>
+        <string name="sc03_msg_01">
+            The enemy\'s Crasher is terrifying,\r\n
+            We can restore the vitality by fortress management\r\n
+            Proposed to learn \'Prosperity\' after the battle.\r\n
+        </string>
+        <string name="sc03_msg_02">
+            We just shot two heavy Infantry,\r\n
+            They are fear , no mercy !\r\n
+        </string>
+    <!--==============4===============-->
+        <string name="sc04_title_01">Chapter 4:Staged victory:\r\n
+            They are flee,the enemy army retreated 2.5 kilometers.\r\n
+            but they seem to build something.\r\n
+        </string>
+        <string name="sc04_msg_01">
+            they are trying to lead skirmishers to death,\r\n
+            Could such a weak attack shake our city wall ?\r\n
+        </string>
+    <!--==============5===============-->
+        <string name="sc05_title_01">Chapter 5:Jing siege tower:\r\n
+        Anlu bet on everything.\r\n
+        Their general offensive began...\r\n
+        Zhao Yuan, the emperor made up into the commoner, preparing to flee.\r\n
+        and left a tricks in the bag for you.
+        </string>
+        <string name="sc05_msg_01">
+        Anlu left instruction of \'total attack\',\r\n
+        And then come to the front.\r\n
+        </string>
+         <string name="sc05_msg_02">
+        There is a gunner in the siege tower!\r\n
+        we are doomed...\r\n
+        </string>
+    <!--==============6===============-->
+       <string name="sc06_title_01">Chapter 6:Not delve:\r\n
+        Anlu died in the Jing siege tower,\r\n
+        Clean up the wreck of the tower get many materials.\r\n
+        (HP + 180).\r\n
+        Would the attack to the end?\r\n
+        </string>
+        <string name="sc06_msg_01">
+        The new vanguard of the enemy,named "siege master" Belkin Montgo \r\n
+        Good at breaking into the city with diverse troops.
+        </string>
+        <string name="sc06_msg_02">
+        So many Crashers!
+        </string>
+        <string name="sc06_msg_03">
+        Belkin Montgo marking weaknesses of our defense with bannerman after, \r\n
+        Notify his Dragon launcher shell to us!\r\n
+        Kill those bannerman as soon as possible.
+        </string>
+    <!--=============7===============-->
+        <string name="sc07_title_01">Chapter 7:Deratization:\r\n
+        <font color="#ff0000">The enemy\'s messenger come to your town....</font>\r\n
+        Thore,father of Belkin Montgo,has arrived with reinforcements.\r\n
+        The messenger has a message from Belkin Montgo:
+        "If you don\'t surrender, I\'ll put the knife in your head..."\r\n
+        </string>
+        <string name="sc07_msg_01">
+        This a general offensive !\r\n
+        Belkin Montgo in the attacking army now.\r\n
+        It will be the formation of a new attack after he escaped, to seize this opportunity!
+        </string>
+        <string name="sc07_msg_02">
+        Belkin Montgo is dead. \r\n
+        </string>
+    <!--==============8===============-->
+        <string name="sc08_title_01">Chapter 8:Revenge:\r\n
+        The body of Belkin Montgo was dragged away by them,
+        Thore will avenge for his son.\r\n
+        </string>
+        <string name="sc08_msg_01">
+        Thore is battle-hardened,The Crasher will cover crossbowman and bannerman,\r\n
+        Beware.
+        </string>
+        <string name="sc08_msg_02">
+        General offensive suspended unheralded, why?
+        </string>
+    <!--==============9===============-->
+        <string name="sc09_title_01">Chapter 9:Good rest:\r\n
+        It is said,Thore was suddenly die of hematemesis in command.\r\n
+        His vassals fled,this is a help from heaven.\r\n
+        There is not much food in the city, just to see what can be eaten outside.\r\n
+        </string>
+        <string name="sc09_msg_01">
+        When the birds are close to the town, shoot at them,\r\n
+        Don\'t let them fly over the town.
+        </string>
+        <string name="sc09_msg_02">
+        Angered the boar,let it come.\r\n
+        Don\'t kill it too fast, or you can\'t get any food.
+        </string>
+        <string name="sc09_msg_03">
+        Emergency report! About the enemy...\r\n
+        </string>
+    <!--==============10===============-->
+        <string name="sc10_title_01">Chapter 10:King of the kings:\r\n
+        <font color="#ff0000">The enemy\'s messenger come to your town....</font>\r\n
+        The enemy commander Deda has a fearsome brutal army,\r\n
+        The army from the vast world under the rule of Deda!\r\n
+        messenger has a message from Deda:\r\n
+        "I admire your courage and perseverance, I pardon you..."\r\n
+        "But you must promise that ZhaoYuan must die to me before ,"\r\n
+        "and i must get \'Book of WuMu\' that on ZhaoYuan "\r\n
+        </string>
+        <string name="sc10_msg_01">
+        The enemy troops were armed with firearm,\r\n
+        One salvo enough to wreck the thickest wall!
+        </string>
+        <string name="sc10_msg_02">
+        Destroy the enemy on the horizon as soon as possible,\r\n
+        Make sure our loss is least.
+        </string>
+        <string name="sc10_msg_03">
+        Deda\'s speed of troops deployment so quickly!\r\n
+        </string>
+    <!--==============11===============-->
+        <string name="sc11_title_01">Chapter 11:Firepower Neutralization:\r\n
+        The enemy ShenJi legion has deployed,\r\n
+        The emperor no longer in the town,\r\n
+        the trick in bag write on paper:\r\n
+        "You should defense it well.thank you when i back."
+        </string>
+    <!--==============12===============-->
+        <string name="sc12_title_01">Chapter 12:General offensive:\r\n
+        Deda has divided troops into seven for different duty,.\r\n
+        <font color="#ff0000">The enemy\'s messenger come to your town....</font>\r\n
+        looking very arrogant,\r\n
+        messenger has a message from Deda:\r\n
+        "When i capture you town,"\r\n
+        "No one live,even one of grass!"
+        </string>
+        <string name="sc12_msg_01">
+        We are tough!HA!,\r\n
+        Deda driving the last high-value troops to seek doom. \r\n
+        The enemy\'s momentum is weak!
+        </string>
+        <string name="sc12_msg_02">
+            what is ....that???
+        </string>
+    <!--==============13===============-->
+        <string name="sc13_title_01">Chapter 13:FINAL BATTLE:\r\n
+        Enemy infantry escorted a giant beast to the camp of Deda!\r\n
+        This is the final battle, victory or defeat in this one!!!\r\n
+        All commoners of the town,young and older,come to assist you of defending!\r\n
+            (HP+500!)
+        </string>
+        <string name="sc13_msg_01">
+        Deda riding on the war elephant!\r\n
+        </string>
+
+
+    <!--challenge  -->
+        <string name="sced_title_01">CHALLENGE:\r\n
+        "NO."
+        </string>
+        <string name="sced_title_tm">.
+        </string>
+
+
+        <!--===============challenge mode msg==================-->
+        <!--            case 0:
+                this.sendMsg();
+                break;
+            case 1:break;
+            case 4:break;
+            case 9:break;
+            case 13:break;
+            case 15:break;
+            case 20:break;
+            case 30:break;
+            case 40:break;
+            case 50:break;-->
+        <string name="endless_mod_00">
+            You just grabbed the city,\r\n
+            Defense facilities needed to rebuild,\r\n
+            Only passively waiting the counterattack force.
+        </string>
+        <string name="endless_mod_01">
+            It\'s not hard to defense.
+        </string>
+        <string name="endless_mod_04">
+            gift you of a BOSS.
+        </string>
+        <string name="endless_mod_09">
+            well done,but unfortunately...
+        </string>
+        <string name="endless_mod_13">
+            I think it should have been more serious.
+        </string>
+        <string name="endless_mod_15">
+            Why do I think you\'re cheating?\r\n
+            But thank you for you loving the game.\r\n
+            Actually, I am looking for a full-time job to make game.\r\n
+            I hope when you see that,\r\n
+            my dream had come true.\r\n
+            我最满意的部分是我绘制的那些山脉,\r\n
+            有西藏的感觉,\r\n
+            我在那里逗留过约四个月.\r\n
+            如果你看完我的废话,\r\n
+            你应该已经输了.
+        </string>
+    <string name="title_activity_fail">FailActivity</string>
+
+    <string name="hint_random_01">When you can not pass game,restart all,and change all of your skills !</string>
+    <string name="title_activity_logo">LogoActivity</string>
+</resources>

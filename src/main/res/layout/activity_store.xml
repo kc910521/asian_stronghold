@@ -1,0 +1,146 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.ck.ind.finddir.StoreActivity"
+    android:background="@drawable/skbg"
+    android:baselineAligned="false">
+
+
+
+    <RelativeLayout
+        android:layout_width = "match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight ="1"
+        >
+        <com.ck.ind.finddir.ui.SkillButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="255.0"
+            android:id="@+id/skbtn_arr"
+            android:contentDescription="@string/sk_01_inf"
+            android:background="@drawable/icon_arrows"
+            android:tag="ARR"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp" />
+        <!--android:text="arrows"-->
+        <com.ck.ind.finddir.ui.SkillButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="flour"
+            android:contentDescription="@string/sk_02_inf"
+            android:tag="FLOUR"
+            android:id="@+id/skbtn_flour"
+            android:background="@drawable/icon_prosperity"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <com.ck.ind.finddir.ui.SkillButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="80dp"
+            android:height="70dp"
+            android:text="DRAGON"
+            android:id="@+id/skbtn_dragon"
+            android:contentDescription="@string/sk_03_inf"
+            android:background="@drawable/icon_dragon"
+            android:tag="DRAGON"
+            android:layout_marginBottom="5dp"
+
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width = "match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_weight ="1"
+        >
+<!--android:background="#e19f9f9f"-->
+        <com.ck.ind.finddir.ui.SkillButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="catapult"
+            android:contentDescription="@string/sk_04_inf"
+            android:tag="CAT"
+            android:id="@+id/skbtn_cat"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="62dp"
+            android:background="@drawable/icon_catapult" />
+
+
+
+        <com.ck.ind.finddir.ui.SkillButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="manager"
+            android:contentDescription="@string/sk_05_inf"
+            android:tag="MANAGER"
+            android:id="@+id/skbtn_manager"
+            android:background="@drawable/icon_terror"
+            android:layout_below="@+id/skbtn_cat"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/choose_skill"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="4dp"
+            android:textSize="13dp"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width = "fill_parent"
+        android:layout_height="match_parent"
+
+        android:layout_weight ="1">
+<!--android:background="@color/dim_foreground_disabled_material_light"-->
+
+        <com.ck.ind.finddir.ui.SkillButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reinforce"
+            android:id="@+id/skbtn_emp"
+            android:contentDescription="@string/sk_06_inf"
+            android:tag="ADEF"
+            android:background="@drawable/icon_emp"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentBottom="true"
+             />
+
+        <com.ck.ind.finddir.ui.SkillButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_firecrow"
+            android:contentDescription="@string/sk_07_inf"
+            android:tag="FCROW"
+            android:id="@+id/skbtn_fcrow"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <com.ck.ind.finddir.ui.SkillButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="oil"
+            android:id="@+id/skbtn_oil"
+            android:contentDescription="@string/sk_08_inf"
+            android:tag="OIL"
+            android:background="@drawable/icon_oil"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

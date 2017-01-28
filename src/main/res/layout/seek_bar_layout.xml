@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    >
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+
+    >
+    <TextView
+        android:id="@+id/seekbar_tetview_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SeekBar自定义"
+    />
+    <TextView
+        android:id="@+id/seekbar_tetview_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SeekBar拖动时信息提示"
+    />
+    <SeekBar
+        android:layout_width="321px"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:maxHeight="20px"
+        android:minHeight="20px"
+        android:paddingLeft="18px"
+        android:paddingRight="18px"
+        android:max="100"
+        android:progress="50"
+        android:progressDrawable="@drawable/seekbar_style"
+        android:thumb="@drawable/seekbar_thumb"
+        android:thumbOffset="10dp"
+        android:id="@+id/seekBar"/>
+        </LinearLayout>
+    </ScrollView>
+

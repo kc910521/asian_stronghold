@@ -1,0 +1,196 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="right"
+        android:id="@+id/surface_linlayout">
+
+        <com.ck.ind.finddir.MySurfaceView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/mysurface_view" />
+
+
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:text="OPTION"
+            android:id="@+id/btn_option"
+            android:visibility="gone"
+            android:layout_gravity="bottom" />
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="95dp"
+            android:layout_height="80dp"
+            android:paddingTop="3dp"
+            android:paddingRight="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/radius_bg"
+            >
+            <com.ck.ind.finddir.ui.LaunchButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_firecrow"
+                android:visibility="invisible"
+                android:tag="FCROW"
+                android:text=""
+                android:id="@+id/btn_skill3"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_gravity="bottom"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="275dp"
+            android:layout_height="90dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/radius_bg"
+            >
+            <com.ck.ind.finddir.ui.LaunchButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_dragon"
+                android:text=""
+                android:tag="DRAGON"
+                android:id="@+id/btn_skill4"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/btn_skill1"
+                android:visibility="invisible"
+                />
+            <com.ck.ind.finddir.ui.LaunchButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/icon_arrows_lay"
+                android:visibility="invisible"
+                android:text=""
+                android:tag="ARR"
+                android:id="@+id/btn_skill1"
+                android:layout_gravity="top" />
+            <com.ck.ind.finddir.ui.LaunchButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/btn_skill4"
+                android:layout_alignParentBottom="true"
+                android:text=""
+                android:id="@+id/btn_skill2"
+                android:layout_gravity="top"
+                android:visibility="invisible"
+                android:tag="OIL"
+                android:background="@drawable/icon_oil" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="105dp"
+            android:layout_height="210dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/radius_bg"
+            >
+            <com.ck.ind.finddir.ui.VerticalSeekBar
+                android:id="@+id/seekBar_power"
+
+                android:layout_height="200dp"
+                android:layout_marginLeft="11dp"
+                android:progress="50"
+                android:paddingTop="0dp"
+                android:paddingBottom="5dp"
+                android:max="100"
+                android:minHeight="200dp"
+                android:maxHeight="200dp"
+
+                android:minWidth="33dp"
+                android:layout_width="33dp"
+                android:maxWidth="33dp"
+                android:progressDrawable="@drawable/seekbar_style"
+                android:thumb="@drawable/abc_btn_check_material"
+                android:splitTrack="false"
+
+                android:layout_alignParentBottom="true" />
+            <!--@drawable/seekbar_thumb-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:id="@+id/power_indicate"
+                android:text="50%"
+                android:textStyle="italic"
+                android:layout_alignParentBottom="true"
+                android:textColor="#962222"
+                android:layout_toRightOf="@+id/seekBar_power"
+                android:layout_marginBottom="12dp"
+                ></TextView>
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/enemy_wainf"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="#961111"
+            android:id="@+id/tv_enemy_still"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+<!--        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton_quit"
+            android:src="@drawable/icon_screenshot_lay"
+            android:background="@drawable/radius_bg"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />-->
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton_pause"
+            android:src="@drawable/icon_pause_1"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/radius_bg"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton_screenshot"
+            android:visibility="gone"
+            android:src="@drawable/icon_screenshot_lay"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/radius_bg"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageButton_pause"
+            />
+
+
+    </RelativeLayout >
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/radius_bg"
+    >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/sys_save_note"
+        android:textColor="#992211"
+        android:gravity="center"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:singleLine="true"
+        android:id="@+id/textView5" />
+    <ListView
+        android:id="@+id/save_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:fadingEdge="horizontal"
+        android:scrollbarStyle="insideOverlay"
+        android:dividerHeight="4dp"
+        android:padding="3dp"
+        >
+
+
+    </ListView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <Button
+            android:id="@+id/btn_go_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/btn_cancel_save"
+            android:layout_toStartOf="@+id/btn_cancel_save" />
+        <Button
+            android:id="@+id/btn_cancel_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_sys_myth"
+            android:textSize="13dp"
+            android:layout_marginRight="6dp"
+            android:text="Cancel"
+            android:layout_alignParentRight="true"
+        />
+
+    </RelativeLayout>
+</LinearLayout>
