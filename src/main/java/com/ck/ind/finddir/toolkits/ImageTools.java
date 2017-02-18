@@ -183,7 +183,7 @@ public final class ImageTools {
     }
     //invoke c/c++
     static {
-//        System.loadLibrary("hello-android-jni");
+        System.loadLibrary("hello-android-jni");
     }
     public native String getMsgFromJni2();
 

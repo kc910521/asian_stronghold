@@ -17,12 +17,25 @@ model {
             release {
                 minifyEnabled = false
                 proguardFiles.add(file('proguard-android.txt'))
-                //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             }
         }
         ndk {
-            moduleName = "hello-android-jni"
+            // All configurations that can be changed in android.ndk.
+            moduleName "hello-android-jni"
+//            toolchain "clang"
+//            toolchainVersion "3.5"
+            // Note that CFlags has a capital C, which is inconsistent with
+            // the naming convention of other properties.  This is a
+            // technical limitation that will be resolved
+            CFlags.add("-DCUSTOM_DEFINE")
+            cppFlags.add("-DCUSTOM_DEFINE")
+            ldFlags.add("-L/custom/lib/path")
+            ldLibs.add("log")
+            //undefined reference to 'AndroidBitmap_getInfo'
+            ldLibs.add("jnigraphics")
+            stl "stlport_static"
         }
+
         //sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/drawable/bkg'] } }
     }
 }

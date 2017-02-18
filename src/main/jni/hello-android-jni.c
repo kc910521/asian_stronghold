@@ -1,14 +1,15 @@
 #include <jni.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <stdint.h>
-#include <jni.h>
 #include <android/bitmap.h>
 #include <android/log.h>
 
+#define  LOG_TAG    "libplasma"
+
+
 #ifndef eprintf
-#define eprintf(...) __android_log_print(ANDROID_LOG_ERROR,"@",__VA_ARGS__)
+#define  eprintf(...)  __android_log_print(ANDROID_LOG_INFO,LOG_TAG,__VA_ARGS__)
+/*#define eprintf(...) __android_log_print(ANDROID_LOG_ERROR,"@",__VA_ARGS__)*/
 #endif
 
 #define RGB565_R(p) ((((p) & 0xF800) >> 11) << 3)
@@ -29,7 +30,7 @@
 JNIEXPORT void JNICALL
 Java_com_ck_ind_finddir_toolkits_ImageTools_rotateBitmap(JNIEnv *env, jobject instance,
                                                          jobject zBitmap) {
-/*
+
     // TODO
     JNIEnv J = *env;
 
@@ -95,10 +96,11 @@ Java_com_ck_ind_finddir_toolkits_ImageTools_rotateBitmap(JNIEnv *env, jobject in
             }
         }
     }
-    AndroidBitmap_unlockPixels(env, zBitmap);*/
+    AndroidBitmap_unlockPixels(env, zBitmap);
 
 }
 
+/*
 JNIEXPORT jstring JNICALL
 Java_com_ck_ind_finddir_toolkits_ImageTools_getMsgFromJni2(JNIEnv *env, jobject instance) {
 
@@ -106,4 +108,4 @@ Java_com_ck_ind_finddir_toolkits_ImageTools_getMsgFromJni2(JNIEnv *env, jobject 
     const char* abc = "okok";
 
     return (*env)->NewStringUTF(env, abc);
-}
+}*/
