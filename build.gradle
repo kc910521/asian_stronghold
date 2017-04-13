@@ -21,7 +21,8 @@ model {
         }
         ndk {
             // All configurations that can be changed in android.ndk.
-            moduleName "hello-android-jni"
+            //moduleName "hello-android-jni"
+            moduleName "bitmap-oper"
 //            toolchain "clang"
 //            toolchainVersion "3.5"
             // Note that CFlags has a capital C, which is inconsistent with
@@ -34,6 +35,8 @@ model {
             //undefined reference to 'AndroidBitmap_getInfo'
             ldLibs.add("jnigraphics")
             stl "stlport_static"
+
+
         }
 
         //sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/drawable/bkg'] } }
