@@ -207,7 +207,7 @@ JNIEXPORT void JNICALL Java_com_ck_ind_finddir_toolkits_ImageTools_rotateBitmap(
             int SrcBitmapx = (int)((x+minx)*cosine+(y+miny)*sine);
             int SrcBitmapy = (int)((y+miny)*cosine-(x+minx)*sine);
             if(SrcBitmapx >= 0 && SrcBitmapx < srcWidth && SrcBitmapy >= 0 &&
-                 SrcBitmapy < srcHeight )
+               SrcBitmapy < srcHeight )
             {
                 newBitmapPixels[DestBitmapWidth * y + x] = previousData[srcWidth * SrcBitmapy + SrcBitmapx];
             }

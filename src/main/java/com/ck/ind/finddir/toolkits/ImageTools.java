@@ -8,6 +8,8 @@ import android.util.Log;
 
 import com.ck.ind.finddir.Constant;
 
+import java.nio.ByteBuffer;
+
 /**
  * 基础工具集
  * Created by KCSTATION on 2015/10/29.
@@ -29,9 +31,14 @@ public final class ImageTools {
         if (orientationDegree == 0){
             return bm;
         }
-
+//        if(orientationDegree<0 || orientationDegree>360){
+//            orientationDegree = Math.abs(orientationDegree)%360;
+//        }
+//        ByteBuffer _handler = jniStoreBitmapData(bm);
+//        rotateBitmap(_handler,orientationDegree);
+//        return getBitmapAndFree(_handler);
         Matrix m = new Matrix();
-
+        Log.i("tg","orientationDegree in "+orientationDegree);
         if(orientationDegree<0 || orientationDegree>360){
             orientationDegree = Math.abs(orientationDegree)%360;
         }
@@ -63,9 +70,9 @@ public final class ImageTools {
 
     public static Bitmap resizeBitMapSingle(Bitmap bitmap,int width,int height){
         // Bitmap[] bitmap1 = new Bitmap[bitmap.length];
-            if (bitmap != null) {
-                bitmap = Bitmap.createScaledBitmap(bitmap, width, height, true);
-            }
+        if (bitmap != null) {
+            bitmap = Bitmap.createScaledBitmap(bitmap, width, height, true);
+        }
         return  bitmap;
     }
 
@@ -183,9 +190,36 @@ public final class ImageTools {
     }
     //invoke c/c++
     static {
-        System.loadLibrary("hello-android-jni");
+        System.loadLibrary("bitmap-oper");
+        //System.loadLibrary("hello-android-jni");
     }
-    public native String getMsgFromJni2();
+    private static Bitmap getBitmap(ByteBuffer _handler)
+    {
+        if(_handler==null)
+            return null;
+        return jniGetBitmapFromStoredBitmapData(_handler);
+    }
+    private static Bitmap getBitmapAndFree(ByteBuffer _handler) {
+        final Bitmap bitmap=getBitmap(_handler);
+        freeBitmap(_handler);
+        return bitmap;
+    }
+    private static void freeBitmap(ByteBuffer _handler){
+        if (_handler == null){
+            return;
+        }
+        jniFreeBitmapData(_handler);
+        _handler = null;
+    }
+    //public native String getMsgFromJni2();
 
-    public native void rotateBitmap(Object zBitmap);
+    private static native void rotateBitmap(ByteBuffer handler,int angle);
+
+    private static native ByteBuffer jniStoreBitmapData(Bitmap bitmap);
+
+    private static native void jniFreeBitmapData(ByteBuffer handler);
+
+    private static native Bitmap jniGetBitmapFromStoredBitmapData(ByteBuffer handler);
+
+//    private static native void rotateBitmap2(Object zBitmap,int degree);
 }
