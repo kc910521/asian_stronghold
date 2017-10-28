@@ -25,6 +25,8 @@ import com.ck.ind.finddir.play.IMainScene;
 import com.ck.ind.finddir.play.MySurfacePlayView;
 import com.ck.ind.finddir.scene.MainScene;
 import com.ck.ind.finddir.sharep.PropertiesService;
+import com.ck.ind.finddir.sound.JavaSoundPool;
+import com.ck.ind.finddir.sound.SoundPoolIf;
 import com.ck.ind.finddir.sqlite.GameStore;
 import com.ck.ind.finddir.thread.DrawThread;
 import com.ck.ind.finddir.toolkits.ImageTools;
@@ -56,6 +58,19 @@ public class StartActivity extends Activity {
     private IMainScene mainSceneMenu = null;
 
     //private View mainView = null;
+
+    //sound
+    private static String TAG = "OpenSLSoundPool";
+
+    private SoundPoolIf currentPool;
+
+    private int[] currentSounds;
+
+    private final static int MAX_STREAMS = 24,
+            MAX_PLAYER_GAP = 20,
+            INT_PLAYER_THREADS = 4;
+
+    private boolean playing = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,7 +109,57 @@ public class StartActivity extends Activity {
         this.initAccessory();
 
         //
+
+        //initialize soundpool
+        // use Android SoundPool (via a wrapper) by default
+        currentPool = new JavaSoundPool(MAX_STREAMS);
+        currentSounds = loadSounds(currentPool);
     }
+
+    private int[] loadSounds(SoundPoolIf sp){
+        int ids[] = new int[6];
+		ids[0] = sp.load(this, R.raw.footstep);
+//		ids[1] = sp.load(this, R.raw.die2);
+//		ids[2] = sp.load(this, R.raw.die3);
+//		ids[3] = sp.load(this, R.raw.die_soft);
+//		ids[4] = sp.load(this, R.raw.die_soft1);
+//		ids[5] = sp.load(this, R.raw.die_soft2);
+
+        return ids;
+    }
+
+    public void playRandomSound(){
+        currentPool.play(currentSounds[0], (float)( Math.random() * 1.0f ));
+    }
+
+
+    private void createPlayerThread(){
+        Runnable player = new Runnable() {
+
+            @Override
+            public void run() {
+                boolean running = true;
+                while(running){
+                    if (playing){
+                        synchronized(StartActivity.this){
+                            playRandomSound();
+                        }
+                    }
+                    // Sleep between 0 and MAX_PLAYER_GAP ms between
+                    // playing samples
+                    try {
+                        Thread.sleep((int)(Math.random() * MAX_PLAYER_GAP));
+                    } catch (InterruptedException e) {
+                        running = false;
+                    }
+                }
+            }
+        };
+
+        Thread t = new Thread(player);
+        t.start();
+    }
+
 
     /**
      * 是否已经通关
@@ -174,6 +239,7 @@ public class StartActivity extends Activity {
         btnAbout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playRandomSound();
                 popWin("If you have any question or suggestion \r\n" +
                         "just send all to：\r\n Qmine@outlook.com\r\n" +
                         "KnightNine91@gmail.com\r\n" +

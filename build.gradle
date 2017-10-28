@@ -34,6 +34,7 @@ model {
             // All configurations that can be changed in android.ndk.
             //moduleName "hello-android-jni"
             moduleName "bitmap-oper"
+            moduleName "opensl-soundpool"
 //            toolchain "clang"
 //            toolchainVersion "3.5"
             // Note that CFlags has a capital C, which is inconsistent with
@@ -42,6 +43,8 @@ model {
             CFlags.add("-DCUSTOM_DEFINE")
             cppFlags.add("-DCUSTOM_DEFINE")
             ldFlags.add("-L/custom/lib/path")
+            ldLibs.add("OpenSLES")
+            // sound
             ldLibs.add("log")
             //undefined reference to 'AndroidBitmap_getInfo'
             ldLibs.add("jnigraphics")
