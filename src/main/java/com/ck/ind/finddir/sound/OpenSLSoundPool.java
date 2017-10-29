@@ -27,6 +27,7 @@ import android.util.Log;
 public class OpenSLSoundPool implements SoundPoolIf {
 	public static final int RATE_44_1 = 1;
 	public static final int FORMAT_16 = 1;
+	public static final int MAX_STREAMS = 24;
 	
 	private static String TAG = "OpenSLSoundPool";
 	static public boolean available = false;

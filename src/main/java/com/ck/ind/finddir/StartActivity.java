@@ -26,6 +26,7 @@ import com.ck.ind.finddir.play.MySurfacePlayView;
 import com.ck.ind.finddir.scene.MainScene;
 import com.ck.ind.finddir.sharep.PropertiesService;
 import com.ck.ind.finddir.sound.JavaSoundPool;
+import com.ck.ind.finddir.sound.OpenSLSoundPool;
 import com.ck.ind.finddir.sound.SoundPoolIf;
 import com.ck.ind.finddir.sqlite.GameStore;
 import com.ck.ind.finddir.thread.DrawThread;
@@ -65,10 +66,6 @@ public class StartActivity extends Activity {
     private SoundPoolIf currentPool;
 
     private int[] currentSounds;
-
-    private final static int MAX_STREAMS = 24,
-            MAX_PLAYER_GAP = 20,
-            INT_PLAYER_THREADS = 4;
 
     private boolean playing = false;
 
@@ -112,7 +109,9 @@ public class StartActivity extends Activity {
 
         //initialize soundpool
         // use Android SoundPool (via a wrapper) by default
-        currentPool = new JavaSoundPool(MAX_STREAMS);
+        currentPool = new OpenSLSoundPool(OpenSLSoundPool.MAX_STREAMS, OpenSLSoundPool.RATE_44_1, OpenSLSoundPool.FORMAT_16, 1);
+//        currentPool = new JavaSoundPool(OpenSLSoundPool.MAX_STREAMS);
+
         currentSounds = loadSounds(currentPool);
     }
 
@@ -129,11 +128,11 @@ public class StartActivity extends Activity {
     }
 
     public void playRandomSound(){
-        currentPool.play(currentSounds[0], (float)( Math.random() * 1.0f ));
+        currentPool.play(currentSounds[0], 1);
     }
 
 
-    private void createPlayerThread(){
+ /*   private void createPlayerThread(){
         Runnable player = new Runnable() {
 
             @Override
@@ -158,7 +157,7 @@ public class StartActivity extends Activity {
 
         Thread t = new Thread(player);
         t.start();
-    }
+    }*/
 
 
     /**

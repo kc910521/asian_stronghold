@@ -54,4 +54,8 @@ public class Constant {
     public static String PLAYER_NAME = "player";
 
     public static int CHEAT_TRIGGER = 0;
+
+    //============================= sounds
+
+    public static final String SOUND_ENUMS_PREFIX = "sounds_sos_";
 }

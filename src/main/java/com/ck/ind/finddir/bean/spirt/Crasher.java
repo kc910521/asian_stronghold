@@ -40,7 +40,7 @@ public class Crasher extends AbsEnemyObj implements IEnemy,Cloneable{
 
         this.height = this.runningBitmap[0].getHeight();
         this.size = this.runningBitmap[0].getWidth();
-        this.runSpeed = ImageTools.positionConvert(2);
+        this.runSpeed = ImageTools.positionConvert(3);
         this.buildingAttPower = 19;
         this.HP = this.maxHp = 30;
         this.attackInterval = 3000;
