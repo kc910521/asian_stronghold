@@ -21,6 +21,7 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ck.ind.finddir.enums.SoundEnums;
 import com.ck.ind.finddir.play.IMainScene;
 import com.ck.ind.finddir.play.MySurfacePlayView;
 import com.ck.ind.finddir.scene.MainScene;
@@ -59,9 +60,6 @@ public class StartActivity extends Activity {
     private IMainScene mainSceneMenu = null;
 
     //private View mainView = null;
-
-    //sound
-    private static String TAG = "OpenSLSoundPool";
 
     private SoundPoolIf currentPool;
 
@@ -109,15 +107,15 @@ public class StartActivity extends Activity {
 
         //initialize soundpool
         // use Android SoundPool (via a wrapper) by default
-        currentPool = new OpenSLSoundPool(OpenSLSoundPool.MAX_STREAMS, OpenSLSoundPool.RATE_44_1, OpenSLSoundPool.FORMAT_16, 1);
-//        currentPool = new JavaSoundPool(OpenSLSoundPool.MAX_STREAMS);
+//        currentPool = new OpenSLSoundPool(OpenSLSoundPool.MAX_STREAMS, OpenSLSoundPool.RATE_44_1, OpenSLSoundPool.FORMAT_16, 1);
+        currentPool = new JavaSoundPool(OpenSLSoundPool.MAX_STREAMS);
 
         currentSounds = loadSounds(currentPool);
     }
 
     private int[] loadSounds(SoundPoolIf sp){
         int ids[] = new int[6];
-		ids[0] = sp.load(this, R.raw.footstep);
+		ids[0] = sp.load(this, SoundEnums.TEST.getSourceId());
 //		ids[1] = sp.load(this, R.raw.die2);
 //		ids[2] = sp.load(this, R.raw.die3);
 //		ids[3] = sp.load(this, R.raw.die_soft);
