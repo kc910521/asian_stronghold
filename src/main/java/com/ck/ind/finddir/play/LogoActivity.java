@@ -17,6 +17,7 @@ import com.ck.ind.finddir.Constant;
 import com.ck.ind.finddir.R;
 import com.ck.ind.finddir.StartActivity;
 import com.ck.ind.finddir.sharep.PropertiesService;
+import com.ck.ind.finddir.sound.SoundFile;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -33,7 +34,7 @@ public class LogoActivity extends Activity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-
+        SoundFile.init(this);
 
         if (!this.appIconExist(getApplicationContext())){
             this.addShortcut(getString(R.string.app_name));

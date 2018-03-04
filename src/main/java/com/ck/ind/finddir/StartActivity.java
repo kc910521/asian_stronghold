@@ -28,6 +28,7 @@ import com.ck.ind.finddir.scene.MainScene;
 import com.ck.ind.finddir.sharep.PropertiesService;
 import com.ck.ind.finddir.sound.JavaSoundPool;
 import com.ck.ind.finddir.sound.OpenSLSoundPool;
+import com.ck.ind.finddir.sound.SoundFile;
 import com.ck.ind.finddir.sound.SoundPoolIf;
 import com.ck.ind.finddir.sqlite.GameStore;
 import com.ck.ind.finddir.thread.DrawThread;
@@ -35,9 +36,6 @@ import com.ck.ind.finddir.toolkits.ImageTools;
 import com.ck.ind.finddir.ui.PopStageStore;
 import com.ck.ind.finddir.ui.PopWindow;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -61,11 +59,7 @@ public class StartActivity extends Activity {
 
     //private View mainView = null;
 
-    private SoundPoolIf currentPool;
-
-    private int[] currentSounds;
-
-    private boolean playing = false;
+//    private SoundPoolIf currentPool;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,27 +102,7 @@ public class StartActivity extends Activity {
         //initialize soundpool
         // use Android SoundPool (via a wrapper) by default
 //        currentPool = new OpenSLSoundPool(OpenSLSoundPool.MAX_STREAMS, OpenSLSoundPool.RATE_44_1, OpenSLSoundPool.FORMAT_16, 1);
-        currentPool = new JavaSoundPool(OpenSLSoundPool.MAX_STREAMS);
-
-        currentSounds = loadSounds(currentPool);
     }
-
-    private int[] loadSounds(SoundPoolIf sp){
-        int ids[] = new int[6];
-		ids[0] = sp.load(this, SoundEnums.TEST.getSourceId());
-//		ids[1] = sp.load(this, R.raw.die2);
-//		ids[2] = sp.load(this, R.raw.die3);
-//		ids[3] = sp.load(this, R.raw.die_soft);
-//		ids[4] = sp.load(this, R.raw.die_soft1);
-//		ids[5] = sp.load(this, R.raw.die_soft2);
-
-        return ids;
-    }
-
-    public void playRandomSound(){
-        currentPool.play(currentSounds[0], 1);
-    }
-
 
  /*   private void createPlayerThread(){
         Runnable player = new Runnable() {
@@ -236,7 +210,8 @@ public class StartActivity extends Activity {
         btnAbout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                playRandomSound();
+//                currentPool.play(SoundFile.SOUNDS_POOL.get(SoundEnums.TEST), 1);
+                SoundFile.PLAY(SoundEnums.TEST);
                 popWin("If you have any question or suggestion \r\n" +
                         "just send all to£º\r\n Qmine@outlook.com\r\n" +
                         "KnightNine91@gmail.com\r\n" +
